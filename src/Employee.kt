@@ -67,7 +67,7 @@ fun main() {
 
     println(devDepartment.generateReport())
     println()
-    
+
     employee.assignTask(task1)
     employee.assignTask(task2)
 }
