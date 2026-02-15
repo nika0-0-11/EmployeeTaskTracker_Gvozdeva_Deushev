@@ -1,4 +1,4 @@
-class Employee{
+class Employee: ReportGenerator{
     var fullName: String = ""
         get() = field
 
@@ -24,7 +24,13 @@ class Employee{
             } else
                 field = value
         }
+
+    override fun generateReport(): String {
+        return "=== Данные сотрудника === \nФИО: $fullName \nДолжность: $position \nЗарплата: $salary руб \nОпыт работы: $yearsOfExperience"
+    }
 }
+
+
 
 fun main() {
     val employee = Employee()

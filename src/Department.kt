@@ -3,10 +3,14 @@ abstract class Department {
     abstract fun printDepartmentGoal()
 }
 
-class DevelopmentDepartment: Department() {
+class DevelopmentDepartment: Department(), ReportGenerator {
     override val departmentName: String = "Отдел разработки"
     override fun printDepartmentGoal() {
         println("Писать эффективный код")
+    }
+
+    override fun generateReport(): String {
+        return "=== Информация о отделе === \nНазвание: $departmentName \nЦель: Писать эффективный код"
     }
 }
 
